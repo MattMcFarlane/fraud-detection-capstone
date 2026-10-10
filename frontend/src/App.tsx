@@ -29,7 +29,8 @@ function App() {
     //call api
     // http://127.0.0.1:8000/predict
     // http://fraud-detection-api-env.us-east-2.elasticbeanstalk.com
-    const response = await fetch("http://fraud-detection-api-env.us-east-2.elasticbeanstalk.com/predict", {
+    // https://d3qnz1pzf2tly3.cloudfront.net/predict
+    const response = await fetch("https://d3qnz1pzf2tly3.cloudfront.net/predict", {
       method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(transactionData)
