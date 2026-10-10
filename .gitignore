@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+.idea/
+frontend/node_modules/
+data/card_transdata.csv
