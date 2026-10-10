@@ -8,7 +8,8 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173",
-                   "https://main.d3sev77tjydmfh.amplifyapp.com"],
+                   "https://main.d3sev77tjydmfh.amplifyapp.com",
+                   "https://d3qnz1pzf2tly3.cloudfront.net"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
