@@ -128,25 +128,30 @@ function App() {
 
         {fraudResult != null && (
             <div className="fraud-results">
-              <h2>Results</h2>
+              <h1>Results</h1>
               <p>Prediction: {fraudResult.flagged_as_fraud ? "Fraud" : "Not Fraud"}</p>
               <p>Fraud Probability: {(fraudResult.fraud_probability * 100).toFixed(3)}%</p>
             </div>
         )}
       </section>
 
-      <section id="ds-analysis">
-        <h2>Dataset Analysis</h2>
-        <div>
-          <img src="/charts/fraud_by_home_distance.png" alt="Fraud Rate by Distance From Home"/>
-        </div>
-        <div>
-          <img src="/charts/fraud_by_last_transaction.png" alt="Fraud Rate by Distance From Last Transaction" />
-        </div>
-        <div>
-              <img src="/charts/fraud_by_purchase_ratio.png" alt="Fraud Rate by Ratio to Median Purchase Price"/>
-        </div>
 
+      <section id="ds-analysis">
+        <details>
+          <summary>Dataset Analysis</summary>
+          <div>
+            <img src="/charts/fraud_by_home_distance.png" alt="Fraud Rate by Distance From Home"/>
+          </div>
+          <div>
+            <img src="/charts/fraud_by_last_transaction.png" alt="Fraud Rate by Distance From Last Transaction" />
+          </div>
+          <div>
+                <img src="/charts/fraud_by_purchase_ratio.png" alt="Fraud Rate by Ratio to Median Purchase Price"/>
+          </div>
+          <div>
+                <img src="/charts/fraud_by_boolean_features.png" alt="Fraud count by transaction characteristics"/>
+          </div>
+        </details>
       </section>
     </>
   )
