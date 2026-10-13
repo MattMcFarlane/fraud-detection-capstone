@@ -66,7 +66,8 @@ def createRatio():
     Count = df.groupby("ratio_groups",observed=False)["fraud"].count()
     print(Count)
     #start making the chart
-    ratioFraud.plot(kind="bar")
+    # ratioFraud.plot(kind="bar")
+    ratioFraud.plot(kind="line", marker="o")
     mplot.title("Fraud Rate by Ratio to Median Purchase Price")
     mplot.xlabel("Ratio to Median Purchase Price")
     mplot.ylabel("Fraud Rate %")
@@ -112,7 +113,7 @@ def createBool():
 
 
 #Create Charts
-# createDistanceChartFromHome()
-# createDistanceFromLast()
-# createRatio()
+createDistanceChartFromHome()
+createDistanceFromLast()
+createRatio()
 createBool()
