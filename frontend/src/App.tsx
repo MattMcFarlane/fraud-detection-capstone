@@ -135,7 +135,7 @@ function App() {
         )}
       </section>
 
-
+      {/*Section for charts*/}
       <section id="ds-analysis">
         <details>
           <summary>Dataset Analysis</summary>
