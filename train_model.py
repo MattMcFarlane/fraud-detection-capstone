@@ -1,4 +1,5 @@
-# This is a sample Python script.
+import sys
+
 import pandas as pd
 import joblib
 from sklearn.model_selection import train_test_split
@@ -12,28 +13,29 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, confu
 csvFile = "data/card_transdata.csv"
 df = pd.read_csv(csvFile)
 
-# print(df.head())
-# print(df.shape)
-# print(df.info())
-# print(df.isnull().sum())
-#
-# print("\n\n\n# Check for duplicate rows")
-# # Check for duplicate rows
-# print("Duplicates:", df.duplicated().sum())
-#
-# print("\n\n\n# View summary statistics")
-# # View summary statistics
-# # pd.set_option("display.max_columns", None)
-# print(df.describe())
-#
-# print("\n\n\n# View summary statistics")
-# # Check fraud distribution
-# print(df["fraud"].value_counts())
-#
-# print("\n\n\n# Check fraud percentage")
-# # Check fraud percentage
-# print(df["fraud"].value_counts(normalize=True))
+print(df.head())
+print(df.shape)
+print(df.info())
+print(df.isnull().sum())
 
+print("\n\n\n# Check for duplicate rows")
+# Check for duplicate rows
+print("Duplicates:", df.duplicated().sum())
+#
+print("\n\n\n# View summary statistics")
+# View summary statistics
+# pd.set_option("display.max_columns", None)
+print(df.describe())
+
+print("\n\n\n# View summary statistics")
+# Check fraud distribution
+print(df["fraud"].value_counts())
+
+print("\n\n\n# Check fraud percentage")
+# Check fraud percentage
+print(df["fraud"].value_counts(normalize=True))
+
+# sys.exit()
 
 #start training
 #drop and set output column and target
@@ -133,7 +135,7 @@ for threshold in validation_thresholds:
 #convert results to dataframe and save csv, use no index false to prevent an index column
 pd.DataFrame(validation_results).to_csv("data/validation_results.csv", index=False)
 
-#use .3 as the chosen threshold and test again
+#use .6 as the chosen threshold and test again
 final_threshold = 0.60
 
 test_probabilities = model.predict_proba(x_test)[:, 1]

@@ -140,6 +140,9 @@ function App() {
         <details>
           <summary>Dataset Analysis</summary>
           <div>
+            <img src="/charts/fraud_distribution.png" alt="Fraud Distribution Pie Chart"/>
+          </div>
+          <div>
             <img src="/charts/fraud_by_home_distance.png" alt="Fraud Rate by Distance From Home"/>
           </div>
           <div>
@@ -150,6 +153,9 @@ function App() {
           </div>
           <div>
                 <img src="/charts/fraud_by_boolean_features.png" alt="Fraud count by transaction characteristics"/>
+          </div>
+          <div>
+                <img src="/charts/correlation_heatmap.png" alt="Fraud Correlation Heatmap"/>
           </div>
         </details>
       </section>
